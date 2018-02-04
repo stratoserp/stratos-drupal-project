@@ -1,12 +1,12 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "singularo/stratos-drupal-project",
+    "description": "Project template for Stratos Drupal 8 projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "",
-            "role": ""
+            "name": "Simon Lindsay (singularo)",
+            "role": "Developer"
         }
     ],
     "repositories": [
@@ -34,6 +34,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "bin-dir": "bin/",
         "sort-packages": true
     },
     "autoload": {
