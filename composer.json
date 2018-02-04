@@ -10,10 +10,15 @@
         }
     ],
     "repositories": [
-        {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "stratoserp": {
+            "type": "vcs",
+            "url": "git@github.com:singularo/stratoserp.git"
         }
+
     ],
     "require": {
         "composer/installers": "^1.2",
@@ -22,6 +27,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.4",
         "drush/drush": "^9.0.0",
+        "drupal/stratoserp": "dev-8.x-1.x",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
