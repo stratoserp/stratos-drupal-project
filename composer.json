@@ -27,7 +27,7 @@
         "drupal/core": "~8.5.3",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
-        "singularo/stratoserp_base": "dev-1.x",
+        "singularo/stratoserp_base": "dev-8.x-1.x",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
