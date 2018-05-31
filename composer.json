@@ -25,9 +25,11 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
+        "drupal/stratoserp": "1.*@dev",
         "drush/drush": "^9.0.0",
-        "vlucas/phpdotenv": "^2.4",
         "singularo/stratoserp_base": "dev-8.x-1.x",
+        "universityofadelaide/shepherd-drupal-scaffold": "~1.0",
+        "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
