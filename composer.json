@@ -28,7 +28,7 @@
         "drupal/stratoserp": "1.*@dev",
         "drush/drush": "^9.0.0",
         "singularo/stratoserp_base": "dev-8.x-1.x",
-        "universityofadelaide/shepherd-drupal-scaffold": "~1.0",
+        "universityofadelaide/shepherd-drupal-scaffold": "dev-remove-services-creation",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
@@ -70,9 +70,8 @@
         },
         "drupal-scaffold": {
             "initial": {
-                "sites/default/default.services.yml": "sites/default/services.yml",
                 "sites/default/default.settings.php": "sites/default/settings.php"
             }
-        },
+        }
     }
 }
