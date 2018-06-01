@@ -72,6 +72,20 @@
             "initial": {
                 "sites/default/default.settings.php": "sites/default/settings.php"
             }
+        },
+        "patches": {
+            "drupal/field_group": {
+                "Field groups are not compatible with field layout": "https://www.drupal.org/files/issues/2018-04-20/field_layout_support-2878359-56.patch"
+            },
+            "drupal/paragraphs": {
+                "Fix support for field groups": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
+            },
+            "drupal/serial": {
+                "Support migrating existing values": "https://www.drupal.org/files/issues/2946075-2.serial.Support-migrating-existing-values.patch"
+            },
+            "drupal/views_data_export": {
+                "Batch support": "https://www.drupal.org/files/issues/views_data_export-batch_support-2789531-58-D8.patch"
+            }
         }
     }
 }
