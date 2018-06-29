@@ -28,7 +28,7 @@
         "drupal/stratoserp": "1.*@dev",
         "drush/drush": "^9.0.0",
         "singularo/stratoserp_base": "dev-8.x-1.x",
-        "universityofadelaide/shepherd-drupal-scaffold": "dev-remove-services-creation",
+        "universityofadelaide/shepherd-drupal-scaffold": "master",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
