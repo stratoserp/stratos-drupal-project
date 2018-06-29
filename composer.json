@@ -17,6 +17,10 @@
         "stratoserp": {
             "type": "vcs",
             "url": "https://github.com/singularo/stratoserp_base.git"
+        },
+        "stratoserp_theme": {
+            "type": "vcs",
+            "url": "https://github.com/singularo/stratoserp_theme.git"
         }
     },
     "require": {
@@ -26,6 +30,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
         "drupal/stratoserp": "1.*@dev",
+        "drupal/stratoserp_theme": "dev-8.x-1.x",
         "drush/drush": "^9.0.0",
         "singularo/stratoserp_base": "dev-8.x-1.x",
         "universityofadelaide/shepherd-drupal-scaffold": "master",
