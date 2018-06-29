@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PHP_IDE_CONFIG="serverName=${PROJECT}.${DOMAIN}"
+
+SHEPHERD_INSTALL_PROFILE=stratoserp_base
+
+# Put everything into the var that dsh passes into the docker shell.
+DSH_PROJECT=(--env PHP_IDE_CONFIG=${PHP_IDE_CONFIG} --env SHEPHERD_INSTALL_PROFILE=${SHEPHERD_INSTALL_PROFILE})
