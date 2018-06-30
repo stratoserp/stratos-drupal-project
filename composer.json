@@ -32,6 +32,7 @@
         "drupal/stratoserp": "1.*@dev",
         "drupal/stratoserp_theme": "dev-8.x-1.x",
         "drush/drush": "^9.0.0",
+        "drupal/bootstrap": "3.*@dev",
         "singularo/stratoserp_base": "dev-8.x-1.x",
         "universityofadelaide/shepherd-drupal-scaffold": "master",
         "vlucas/phpdotenv": "^2.4",
