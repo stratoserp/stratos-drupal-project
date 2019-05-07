@@ -1,99 +1,103 @@
 {
-    "name": "singularo/stratos-drupal-project",
-    "description": "Project template for Stratos Drupal 8 projects with composer",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Simon Lindsay (singularo)",
-            "role": "Developer"
-        }
-    ],
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "stratoserp": {
-            "type": "vcs",
-            "url": "https://github.com/singularo/stratoserp_base.git"
-        },
-        "stratoserp_theme": {
-            "type": "vcs",
-            "url": "https://github.com/singularo/stratoserp_theme.git"
-        }
-    },
-    "require": {
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.5",
-        "drupal/console": "^1.0.2",
-        "drupal/core": "~8.5.3",
-        "drupal/stratoserp": "1.*@dev",
-        "drupal/stratoserp_theme": "dev-8.x-1.x",
-        "drush/drush": "^9.0.0",
-        "drupal/bootstrap": "3.*@dev",
-        "singularo/stratoserp_base": "dev-8.x-1.x",
-        "universityofadelaide/shepherd-drupal-scaffold": "master",
-        "vlucas/phpdotenv": "^2.4",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3"
-    },
-    "require-dev": {
-        "webflo/drupal-core-require-dev": "~8.5.3"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "bin-dir": "bin",
-        "sort-packages": true
-    },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": ["load.environment.php"]
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "shepherd-scaffold": "UniversityOfAdelaide\\ShepherdDrupalScaffold\\Plugin::scaffold",
-        "post-install-cmd": [
-            "@drupal-scaffold",
-            "@shepherd-scaffold"
-        ]
-    },
-    "extra": {
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
-        },
-        "drupal-scaffold": {
-            "initial": {
-                "sites/default/default.settings.php": "sites/default/settings.php",
-                ".editorconfig": "../.editorconfig",
-                ".gitattributes": "../.gitattributes"
-            }
-        },
-        "patches": {
-            "drupal/field_group": {
-                "Field groups are not compatible with field layout": "https://www.drupal.org/files/issues/2018-04-20/field_layout_support-2878359-56.patch"
-            },
-            "drupal/paragraphs": {
-                "Fix support for field groups": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
-            },
-            "drupal/serial": {
-                "Support migrating existing values": "https://www.drupal.org/files/issues/2946075-2.serial.Support-migrating-existing-values.patch"
-            },
-            "drupal/views_data_export": {
-                "Batch support": "https://www.drupal.org/files/issues/views_data_export-batch_support-2789531-58-D8.patch"
-            }
-        }
+  "name": "singularo/stratos-drupal-project",
+  "description": "Project template for Stratos Drupal 8 projects with composer",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Simon Lindsay (singularo)",
+      "role": "Developer"
     }
+  ],
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "stratoserp": {
+      "type": "vcs",
+      "url": "https://github.com/singularo/stratoserp_base.git"
+    },
+    "stratoserp_theme": {
+      "type": "vcs",
+      "url": "https://github.com/singularo/stratoserp_theme.git"
+    }
+  },
+  "require": {
+    "composer-plugin-api": "^1.0",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6",
+    "drupal-composer/drupal-scaffold": "^2.5",
+    "drupal/console": "^1.0.2",
+    "drupal/core": "^8.6.*",
+    "drupal/stratoserp": "1.*@dev",
+    "drupal/stratoserp_theme": "dev-8.x-1.x",
+    "drush/drush": "^8.0.0",
+    "drupal/bootstrap": "3.*@dev",
+    "singularo/stratoserp_base": "dev-8.x-1.x",
+    "universityofadelaide/shepherd-drupal-scaffold": "master",
+    "vlucas/phpdotenv": "^2.4",
+    "webflo/drupal-finder": "^1.0.0",
+    "webmozart/path-util": "^2.3"
+  },
+  "require-dev": {
+    "webflo/drupal-core-require-dev": "~8.6.*"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "bin-dir": "bin",
+    "sort-packages": true
+  },
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ],
+    "files": ["load.environment.php"]
+  },
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "shepherd-scaffold": "UniversityOfAdelaide\\ShepherdDrupalScaffold\\Plugin::scaffold",
+    "post-install-cmd": [
+      "@drupal-scaffold",
+      "@shepherd-scaffold"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/{$name}": ["type:drupal-drush"]
+    },
+    "drupal-scaffold": {
+      "initial": {
+        "sites/default/default.settings.php": "sites/default/settings.php",
+        ".editorconfig": "../.editorconfig",
+        ".gitattributes": "../.gitattributes"
+      }
+    },
+    "patches": {
+      "drupal/field_group": {
+        "Field groups are not compatible with field layout": "https://www.drupal.org/files/issues/2018-04-20/field_layout_support-2878359-56.patch"
+      },
+      "drupal/paragraphs": {
+        "Fix support for field groups": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
+      },
+      "drupal/serial": {
+        "Support migrating existing values": "https://www.drupal.org/files/issues/2946075-2.serial.Support-migrating-existing-values.patch"
+      },
+      "drupal/views_data_export": {
+        "Batch support": "https://www.drupal.org/files/issues/views_data_export-batch_support-2789531-58-D8.patch"
+      }
+    },
+    "preserve-paths": [
+        "web/sites"
+    ]
+  }
 }
