@@ -1,0 +1,43 @@
+diff --git a/modules/printable_pdf/src/Plugin/PrintableFormat/PdfFormat.php b/modules/printable_pdf/src/Plugin/PrintableFormat/PdfFormat.php
+index 58b6bf1..6ea6bd9 100644
+--- a/modules/printable_pdf/src/Plugin/PrintableFormat/PdfFormat.php
++++ b/modules/printable_pdf/src/Plugin/PrintableFormat/PdfFormat.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\printable_pdf\Plugin\PrintableFormat;
+ 
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\printable\Plugin\PrintableFormatBase;
+ use Drupal\printable\PrintableCssIncludeInterface;
+ use Drupal\printable\LinkExtractor\LinkExtractorInterface;
+@@ -291,12 +292,15 @@ class PdfFormat extends PrintableFormatBase {
+     $this->pdfGenerator->setter($pdf_content, $pdf_location, $save_pdf, $paper_orientation, $paper_size, $footer_content, $header_content, $path_to_binary);
+ 
+     if (empty($pdf_location)) {
+-      $pdf_location = str_replace("/", "_", $this->pathCurrent->getPath()) . '.pdf';
+-      $pdf_location = substr($pdf_location, 1);
++      /** @var FileSystemInterface $filesystem */
++      $filesystem = \Drupal::service('file_system');
++      $directory = $filesystem->realpath("private://pdf");
++      $filesystem->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
++      $filename = $this->content['#node']->id() . '-' . str_replace(array('/', '-', ' '), '_' ,$this->content['#node']->getTitle());
++      //$filename = $this->pathCurrent->getPath();
++      $this->filename = $filesystem->realpath("private://pdf") . '/' . $filesystem->basename($filesystem->createFilename($filename, 'pdf') . '.pdf');
+     }
+ 
+-    $this->filename = DRUPAL_ROOT . '/' . $pdf_location;
+-
+     $this->pdfGenerator->save($this->filename);
+     if ($this->pdfGenerator->displayErrors()) {
+       $source_url = $this->requestStack->getCurrentRequest()->getRequestUri();
+diff --git a/printable.info.yml b/printable.info.yml
+index fb293ac..1310e79 100644
+--- a/printable.info.yml
++++ b/printable.info.yml
+@@ -5,4 +5,6 @@ package: printable
+ core: 8.x
+ configure: printable.configure
+ dependencies:
++  - node
++  - user
+   - pdf_api:pdf_api
