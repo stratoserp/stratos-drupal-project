@@ -15,7 +15,7 @@
         { "type": "vcs", "url": "https://github.com/previousnext/drush_cmi_tools.git" },
         { "type": "vcs", "url": "https://github.com/singularo/flat_comments.git" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "vcs", "url": "https://github.com/singularo/stratoserp_base.git" },
+        { "type": "path", "url": "~/projects/stratoserp/stratoserp_base" },
         { "type": "vcs", "url": "https://github.com/singularo/stratoserp_theme.git" }
     ],
     "require": {
@@ -25,6 +25,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/core": "^8.7",
+        "drupal/drush-cmi-tools": "dev-8.x-2.x",
         "drupal/stratoserp": "1.*@dev",
         "drupal/stratoserp_theme": "dev-8.x-1.x",
         "drush/drush": "^9.6",
@@ -65,6 +66,9 @@
         ]
     },
     "extra": {
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
         "installer-types": [
             "bower-asset",
             "npm-asset",
@@ -94,14 +98,14 @@
             ]
         },
         "drupal-scaffold": {
-            "drupal-scaffold": {
-                "source": "https://raw.githubusercontent.com/drupal/drupal/{version}/{path}"
-            },
             "initial": {
                 "sites/default/default.services.yml": "sites/default/services.yml",
                 "sites/default/default.settings.php": "sites/default/settings.php"
             }
         },
+        "preserve-paths": [
+            "web/sites"
+        ],
         "composer-exit-on-patch-failure": true,
         "patches": {
             "drupal/chartjs_api": {
@@ -111,9 +115,11 @@
                 "Chosen field should force height to auto": "https://www.drupal.org/files/issues/Issue-2839655-by-hass-Chosen-field-should-force-heig.patch"
             },
             "drupal/core": {
-                "Field layouts don't seem to work for embedded forms": "./patches/2991772-13.patch",
                 "Add __toString to the entity Query class": "https://www.drupal.org/files/issues/2018-07-02/2902311-16.patch",
                 "Migrate exceptions need line details": "https://www.drupal.org/files/issues/2018-05-04/2969551.drupal.migrate-exceptions-missing-file-line.patch"
+            },
+            "drupal/duration_field": {
+                "Support the #date_increment property in the 'duration' form element": "https://www.drupal.org/files/issues/2018-12-14/3020676-6.duration_date_increment.full_.patch"
             },
             "drupal/dynamic_entity_reference": {
                 "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch",
@@ -121,9 +127,6 @@
             },
             "drupal/extra_field": {
                 "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
-            },
-            "drupal/paragraphs": {
-                "Apply layouts to the paragraphs form widget": "https://www.drupal.org/files/issues/2018-11-01/paragraphs-field_layout_support-2991540-7.patch"
             },
             "drupal/pdf_api": {
                 "Set MPDF generation directory to drupals tmp directory": "https://www.drupal.org/files/issues/2019-01-31/tmp-directory-3016161-4.patch"
@@ -139,41 +142,6 @@
             },
             "drupal/views_data_export": {
                 "Batch support": "https://drupal.org/files/issues/2018-08-16/2789531-144.patch"
-            }
-        },
-        "preserve-paths": [
-            "web/sites"
-        ],
-        "extra": {
-            "composer-exit-on-patch-failure": true,
-            "patchLevel": {
-                "drupal/core": "-p2"
-            },
-            "installer-paths": {
-                "web/core": [
-                    "type:drupal-core"
-                ],
-                "web/libraries/{$name}": [
-                    "type:drupal-library"
-                ],
-                "web/modules/contrib/{$name}": [
-                    "type:drupal-module"
-                ],
-                "web/profiles/contrib/{$name}": [
-                    "type:drupal-profile"
-                ],
-                "web/themes/contrib/{$name}": [
-                    "type:drupal-theme"
-                ],
-                "drush/Commands/{$name}": [
-                    "type:drupal-drush"
-                ]
-            },
-            "drupal-scaffold": {
-                "initial": {
-                    ".editorconfig": "../.editorconfig",
-                    ".gitattributes": "../.gitattributes"
-                }
             }
         }
     }
