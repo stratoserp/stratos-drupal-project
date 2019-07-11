@@ -2255,6 +2255,104 @@
             }
         },
         {
+            "name": "drupal/ckeditor_mentions",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor_mentions.git",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_mentions-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "0e28ad113af35a1727199f79d0fdea8c28a8dfdf"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/realname": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1539812281",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Michele Wickham",
+                    "homepage": "https://www.drupal.org/user/571758"
+                },
+                {
+                    "name": "askibinski",
+                    "homepage": "https://www.drupal.org/user/248999"
+                },
+                {
+                    "name": "gnuget",
+                    "homepage": "https://www.drupal.org/user/992990"
+                }
+            ],
+            "description": "CKEditor plugin for user mentioning and inserting.",
+            "homepage": "https://www.drupal.org/project/ckeditor_mentions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditor_mentions"
+            }
+        },
+        {
+            "name": "drupal/ckeditorheight",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditorheight.git",
+                "reference": "298fee64c410c45be02bc62e875f10dc01ee1fb9"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3+0-dev",
+                    "datestamp": "1538040180",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "axel.rutz",
+                    "homepage": "https://www.drupal.org/user/229048"
+                }
+            ],
+            "description": "Adjusts CKEditor height until https://www.drupal.org/node/2788905.",
+            "homepage": "https://www.drupal.org/project/ckeditorheight",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditorheight"
+            },
+            "time": "2018-09-27T09:17:40+00:00"
+        },
+        {
             "name": "drupal/core",
             "version": "8.7.4",
             "source": {
@@ -2641,6 +2739,53 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/date_popup",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/date_popup.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "7a950c593e185bdf677f87b5d724b55a00768d67"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1496370243",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                }
+            ],
+            "description": "Provides a HTML 5 date popup for all views filters.",
+            "homepage": "https://www.drupal.org/project/date_popup",
+            "support": {
+                "source": "https://git.drupalcode.org/project/date_popup"
             }
         },
         {
@@ -7102,7 +7247,10 @@
                 "drupal/bootstrap": "3.*@dev",
                 "drupal/chartjs_api": "dev-1.x",
                 "drupal/chosen": "^2.7",
+                "drupal/ckeditor_mentions": "1.*@dev",
+                "drupal/ckeditorheight": "dev-1.x",
                 "drupal/core": "^8.7",
+                "drupal/date_popup": "^1.0",
                 "drupal/drush-cmi-tools": "dev-8.x-2.x",
                 "drupal/duration_field": "2.*@dev",
                 "drupal/dynamic_entity_reference": "2.*@dev",
