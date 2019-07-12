@@ -4747,7 +4747,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_aggregator.git",
-                "reference": "f895d93f6c179eef11ea72f5a2ccd1fa27d107bd"
+                "reference": "53c47da14514da4dd916992905a7c6e49d8bb4c9"
             },
             "require": {
                 "drupal/core": "*"
@@ -4759,7 +4759,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1562881081",
+                    "datestamp": "1562890381",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4793,7 +4793,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/views_aggregator"
             },
-            "time": "2019-07-11T23:27:41+00:00"
+            "time": "2019-07-12T00:09:52+00:00"
         },
         {
             "name": "drupal/views_bulk_operations",
@@ -7238,7 +7238,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/simon/projects/stratoserp/stratoserp_base",
-                "reference": "33ef5a9fc7bcc0bdbee380479dda6d24ce4e8aeb"
+                "reference": "68daec5c033d7faa5bbfbf590c90453f36be90b8"
             },
             "require": {
                 "composer-plugin-api": "^1.0",
