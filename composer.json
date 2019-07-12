@@ -16,6 +16,7 @@
         { "type": "vcs", "url": "https://github.com/singularo/flat_comments.git" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
         { "type": "path", "url": "/home/simon/projects/stratoserp/stratoserp_base" },
+        { "type": "path", "url": "/home/simon/projects/iseek/shop8/web/modules/custom/stratoserp" },
         { "type": "vcs", "url": "https://github.com/singularo/stratoserp_theme.git" }
     ],
     "require": {
@@ -26,7 +27,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/core": "^8.7",
         "drupal/drush-cmi-tools": "dev-8.x-2.x",
-        "drupal/stratoserp": "1.*@dev",
+        "drupal/stratoserp": "dev-develop",
         "drupal/stratoserp_theme": "dev-8.x-1.x",
         "drush/drush": "^9.6",
         "drupal/bootstrap": "3.*@dev",

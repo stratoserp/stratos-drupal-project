@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e55082857e59e69e74022cc4c9000e07",
+    "content-hash": "82826f57185a99fceb53fefe23f9c216",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4402,83 +4402,37 @@
         },
         {
             "name": "drupal/stratoserp",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/stratoserp.git",
-                "reference": "5b131c40c05ffe4f5700323146549f34c35d9ceb"
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "/home/simon/projects/iseek/shop8/web/modules/custom/stratoserp",
+                "reference": "b45b14c41352d884b0a87e52c352077e2f432ac1"
             },
             "require": {
-                "drupal/core": "~8.0"
-            },
-            "require-dev": {
-                "drupal/chartjs_api": "*",
-                "drupal/duration_field": "*",
-                "drupal/dynamic_entity_reference": "*",
-                "drupal/entity_reference_revisions": "*",
-                "drupal/eva": "*",
-                "drupal/field_group": "*",
-                "drupal/hook_event_dispatcher": "*",
-                "drupal/migrate_plus": "*",
-                "drupal/migrate_tools": "*",
-                "drupal/reference_table_formatter": "*",
-                "drupal/se_contact": "*",
-                "drupal/se_core": "*",
-                "drupal/se_customer": "*",
-                "drupal/se_goods_receipt": "*",
-                "drupal/se_information": "*",
-                "drupal/se_invoice": "*",
-                "drupal/se_item": "*",
-                "drupal/se_item_line": "*",
-                "drupal/se_payment_line": "*",
-                "drupal/se_purchase_order": "*",
-                "drupal/se_quote": "*",
-                "drupal/se_recurring": "*",
-                "drupal/se_service": "*",
-                "drupal/se_stock": "*",
-                "drupal/se_subscription": "*",
-                "drupal/se_supplier": "*",
-                "drupal/se_ticket": "*",
-                "drupal/se_timekeeping": "*",
-                "drupal/serial": "*",
-                "drupal/views_data_export": "*",
-                "drupal/webform": "*",
-                "drupal/webform_access": "*",
-                "drupal/webform_node": "*",
-                "drupal/webform_templates": "*",
-                "drupal/webform_views": "*",
-                "drupal/xero": "*"
+                "drupal/core": "^8.7",
+                "drupal/duration_field": "2.*@dev",
+                "drupal/eva": "^2.0",
+                "drupal/field_group": "dev-3.x",
+                "drupal/flat_comments": "dev-master",
+                "drupal/geolocation": "1.*@dev",
+                "drupal/serial": "dev-1.x",
+                "drupal/xero": "dev-1.x"
             },
             "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1559898785",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "singularo",
-                    "homepage": "https://www.drupal.org/user/143"
+                    "name": "Simon Lindsay",
+                    "homepage": "https://www.drupal.org/u/singularo",
+                    "role": "Maintainer"
                 }
             ],
-            "homepage": "https://www.drupal.org/project/stratoserp",
+            "description": "Stratos ERP.",
             "support": {
-                "source": "https://git.drupalcode.org/project/stratoserp",
-                "error": "Invalid dependency: \"flat_comments\" is an unknown drupal 8 package name"
-            },
-            "time": "2019-07-09T12:12:23+00:00"
+                "issues": "https://github.com/singularo/stratoserp/issues"
+            }
         },
         {
             "name": "drupal/stratoserp_theme",
