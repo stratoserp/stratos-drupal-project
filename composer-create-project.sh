@@ -6,6 +6,7 @@
 # copy into as the second.
 #
 # From: https://gist.github.com/beporter/31e7d1f5beeffda0da94
+# Adjusted for stratoserp local defaults
 #
 # Usage:
 #  - Place this script in your package's root directory and make it executable.
@@ -27,7 +28,7 @@ if ! git diff-index --quiet --cached HEAD; then
 	echo "## Running create-project now will NOT include these changes."
 	while true; do
 		read -p "## Are you sure you want to continue? [Y/n]: " yn
-		case $yn in
+		case ${yn} in
 			[Nn]* ) exit;;
 			[Yy]* ) break;;
 			* ) break;;
@@ -37,11 +38,11 @@ fi
 
 # Warn if the destination dir is non-empty, and offer to delete it.
 # Composer will fail if the directory is not empty.
-if [ -d "${DEST_DIR}" ] && [ "$(ls -A "${DEST_DIR}")" ]; then
+if [[ -d "${DEST_DIR}" ]] && [[ "$(ls -A "${DEST_DIR}")" ]]; then
 	echo "## The destination directory \`${DEST_DIR}\` is not empty."
 	while true; do
 		read -p "## Do you want to delete it and continue? [Y/n]: " yn
-		case $yn in
+		case ${yn} in
 			[Nn]* ) exit;;
 			[Yy]* ) sudo rm -rf "${DEST_DIR}"; break;;
 			* ) rm -rf "${DEST_DIR}"; break;;

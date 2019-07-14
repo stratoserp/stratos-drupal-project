@@ -15,8 +15,8 @@
         { "type": "vcs", "url": "https://github.com/previousnext/drush_cmi_tools.git" },
         { "type": "vcs", "url": "https://github.com/singularo/flat_comments.git" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "path", "url": "/home/simon/projects/stratoserp/stratoserp_base" },
-        { "type": "path", "url": "/home/simon/projects/iseek/shop8/web/modules/custom/stratoserp" },
+        { "type": "vcs", "url": "https://github.com/singularo/stratoserp_base.git" },
+        { "type": "vcs", "url": "https://github.com/singularo/stratoserp.git" },
         { "type": "vcs", "url": "https://github.com/singularo/stratoserp_theme.git" }
     ],
     "require": {
