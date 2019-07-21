@@ -4406,12 +4406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/singularo/stratoserp.git",
-                "reference": "cb0a36159505fa5f9892108500716a6877711b39"
+                "reference": "552c73344cbc54e8ec5235455fc78263ce75ec30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/singularo/stratoserp/zipball/cb0a36159505fa5f9892108500716a6877711b39",
-                "reference": "cb0a36159505fa5f9892108500716a6877711b39",
+                "url": "https://api.github.com/repos/singularo/stratoserp/zipball/552c73344cbc54e8ec5235455fc78263ce75ec30",
+                "reference": "552c73344cbc54e8ec5235455fc78263ce75ec30",
                 "shasum": ""
             },
             "require": {
@@ -4440,7 +4440,7 @@
                 "issues": "https://github.com/singularo/stratoserp/issues",
                 "source": "https://github.com/singularo/stratoserp/tree/develop"
             },
-            "time": "2019-07-21T07:23:16+00:00"
+            "time": "2019-07-21T12:35:41+00:00"
         },
         {
             "name": "drupal/stratoserp_theme",
@@ -7206,12 +7206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/singularo/stratoserp_base.git",
-                "reference": "10fffa94427e179d742974dd1d5eee88a40a7ef5"
+                "reference": "d4e4469dd55abc485e1271f36c755b6bbb2b5c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/singularo/stratoserp_base/zipball/10fffa94427e179d742974dd1d5eee88a40a7ef5",
-                "reference": "10fffa94427e179d742974dd1d5eee88a40a7ef5",
+                "url": "https://api.github.com/repos/singularo/stratoserp_base/zipball/d4e4469dd55abc485e1271f36c755b6bbb2b5c4f",
+                "reference": "d4e4469dd55abc485e1271f36c755b6bbb2b5c4f",
                 "shasum": ""
             },
             "require": {
@@ -7362,10 +7362,10 @@
             "description": "StratosERP installation profile",
             "homepage": "https://github.com/singularo/stratoserp_base",
             "support": {
-                "source": "https://github.com/singularo/stratoserp_base/tree/0.1.2",
+                "source": "https://github.com/singularo/stratoserp_base/tree/0.1.3",
                 "issues": "https://github.com/singularo/stratoserp_base/issues"
             },
-            "time": "2019-07-21T10:43:41+00:00"
+            "time": "2019-07-21T12:43:21+00:00"
         },
         {
             "name": "smalot/pdfparser",
