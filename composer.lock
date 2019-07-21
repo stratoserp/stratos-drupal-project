@@ -4406,12 +4406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/singularo/stratoserp.git",
-                "reference": "552c73344cbc54e8ec5235455fc78263ce75ec30"
+                "reference": "f5138ab47ec1c7de04c2daeef6300f5139377ff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/singularo/stratoserp/zipball/552c73344cbc54e8ec5235455fc78263ce75ec30",
-                "reference": "552c73344cbc54e8ec5235455fc78263ce75ec30",
+                "url": "https://api.github.com/repos/singularo/stratoserp/zipball/f5138ab47ec1c7de04c2daeef6300f5139377ff1",
+                "reference": "f5138ab47ec1c7de04c2daeef6300f5139377ff1",
                 "shasum": ""
             },
             "require": {
@@ -4440,7 +4440,7 @@
                 "issues": "https://github.com/singularo/stratoserp/issues",
                 "source": "https://github.com/singularo/stratoserp/tree/develop"
             },
-            "time": "2019-07-21T12:35:41+00:00"
+            "time": "2019-07-21T13:17:57+00:00"
         },
         {
             "name": "drupal/stratoserp_theme",
