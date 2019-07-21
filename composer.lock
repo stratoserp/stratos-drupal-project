@@ -7206,12 +7206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/singularo/stratoserp_base.git",
-                "reference": "68daec5c033d7faa5bbfbf590c90453f36be90b8"
+                "reference": "10fffa94427e179d742974dd1d5eee88a40a7ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/singularo/stratoserp_base/zipball/68daec5c033d7faa5bbfbf590c90453f36be90b8",
-                "reference": "68daec5c033d7faa5bbfbf590c90453f36be90b8",
+                "url": "https://api.github.com/repos/singularo/stratoserp_base/zipball/10fffa94427e179d742974dd1d5eee88a40a7ef5",
+                "reference": "10fffa94427e179d742974dd1d5eee88a40a7ef5",
                 "shasum": ""
             },
             "require": {
@@ -7362,10 +7362,10 @@
             "description": "StratosERP installation profile",
             "homepage": "https://github.com/singularo/stratoserp_base",
             "support": {
-                "source": "https://github.com/singularo/stratoserp_base/tree/8.x-1.x",
+                "source": "https://github.com/singularo/stratoserp_base/tree/0.1.2",
                 "issues": "https://github.com/singularo/stratoserp_base/issues"
             },
-            "time": "2019-07-12T06:53:11+00:00"
+            "time": "2019-07-21T10:43:41+00:00"
         },
         {
             "name": "smalot/pdfparser",
