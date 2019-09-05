@@ -7342,12 +7342,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/singularo/shepherd-drupal-scaffold.git",
-                "reference": "9e317b1ce6d90975912037a4f8d0391b32f59985"
+                "reference": "9d737261aac53982883a52eb96f351bbac73c019"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/singularo/shepherd-drupal-scaffold/zipball/9e317b1ce6d90975912037a4f8d0391b32f59985",
-                "reference": "9e317b1ce6d90975912037a4f8d0391b32f59985",
+                "url": "https://api.github.com/repos/singularo/shepherd-drupal-scaffold/zipball/9d737261aac53982883a52eb96f351bbac73c019",
+                "reference": "9d737261aac53982883a52eb96f351bbac73c019",
                 "shasum": ""
             },
             "require": {
@@ -7373,7 +7373,7 @@
             "support": {
                 "source": "https://github.com/singularo/shepherd-drupal-scaffold/tree/develop"
             },
-            "time": "2019-08-26T08:41:08+00:00"
+            "time": "2019-09-05T11:05:48+00:00"
         },
         {
             "name": "singularo/stratoserp_base",
