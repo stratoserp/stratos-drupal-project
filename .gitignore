@@ -22,3 +22,19 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Ignore all the things the scaffold adds in for us.
+RoboFile.php
+RoboFileBase.php
+bin/
+composer.json.bak
+config-export/
+config-install/
+docker-compose.linux.yml
+docker-compose.osx.yml
+docker/
+drush/config-delete.yml
+drush/config-ignore.yml
+dsh
+dsh_bash
+web/
