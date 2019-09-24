@@ -3883,17 +3883,17 @@
         },
         {
             "name": "drupal/multiple_fields_remove_button",
-            "version": "1.0.0-alpha10",
+            "version": "1.0.0-alpha11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/multiple_fields_remove_button.git",
-                "reference": "8.x-1.0-alpha10"
+                "reference": "8.x-1.0-alpha11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/multiple_fields_remove_button-8.x-1.0-alpha10.zip",
-                "reference": "8.x-1.0-alpha10",
-                "shasum": "ff28c318e18b1d37827cf7dd1f93293d83ea394a"
+                "url": "https://ftp.drupal.org/files/projects/multiple_fields_remove_button-8.x-1.0-alpha11.zip",
+                "reference": "8.x-1.0-alpha11",
+                "shasum": "289f37bc065f02aa86b52cf9d65f4d70da7036e2"
             },
             "require": {
                 "drupal/core": "*"
@@ -3904,8 +3904,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha10",
-                    "datestamp": "1564754285",
+                    "version": "8.x-1.0-alpha11",
+                    "datestamp": "1569280080",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -7345,12 +7345,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/singularo/shepherd-drupal-scaffold.git",
-                "reference": "e7aa16b5e57bfd5231283ca296d9a31c66b3ce7c"
+                "reference": "ec6a4d27c03a8dc76e1d000337daae9195986340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/singularo/shepherd-drupal-scaffold/zipball/e7aa16b5e57bfd5231283ca296d9a31c66b3ce7c",
-                "reference": "e7aa16b5e57bfd5231283ca296d9a31c66b3ce7c",
+                "url": "https://api.github.com/repos/singularo/shepherd-drupal-scaffold/zipball/ec6a4d27c03a8dc76e1d000337daae9195986340",
+                "reference": "ec6a4d27c03a8dc76e1d000337daae9195986340",
                 "shasum": ""
             },
             "require": {
@@ -7374,9 +7374,9 @@
             ],
             "description": "Composer Plugin for updating the Shepherd Drupal tools.",
             "support": {
-                "source": "https://github.com/singularo/shepherd-drupal-scaffold/tree/develop"
+                "source": "https://github.com/singularo/shepherd-drupal-scaffold/tree/3.6.4"
             },
-            "time": "2019-09-07T03:03:47+00:00"
+            "time": "2019-09-24T06:57:20+00:00"
         },
         {
             "name": "singularo/stratoserp_base",
@@ -10281,16 +10281,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.4.5",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "6fa959452e774dcaed543faad3a9d1a37d803327"
+                "reference": "bd9405077ca04129a73059a06873bedb5e138402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/6fa959452e774dcaed543faad3a9d1a37d803327",
-                "reference": "6fa959452e774dcaed543faad3a9d1a37d803327",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/bd9405077ca04129a73059a06873bedb5e138402",
+                "reference": "bd9405077ca04129a73059a06873bedb5e138402",
                 "shasum": ""
             },
             "require": {
@@ -10319,13 +10319,13 @@
             "authors": [
                 {
                     "name": "Justin Bishop",
-                    "role": "Developer",
-                    "email": "jubishop@gmail.com"
+                    "email": "jubishop@gmail.com",
+                    "role": "Developer"
                 },
                 {
                     "name": "Anthon Pang",
-                    "role": "Fork Maintainer",
-                    "email": "apang@softwaredevelopment.ca"
+                    "email": "apang@softwaredevelopment.ca",
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
@@ -10336,7 +10336,7 @@
                 "webdriver",
                 "webtest"
             ],
-            "time": "2017-06-30T04:02:48+00:00"
+            "time": "2019-09-23T15:50:44+00:00"
         },
         {
             "name": "jcalderonzumba/gastonjs",
