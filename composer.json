@@ -24,11 +24,13 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
-        "drupal/core": "^8.8",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^8.8.0",
+        "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/drush_cmi_tools": "dev-8.x-2.x",
         "drupal/stratoserp": "dev-develop",
         "drupal/stratoserp_theme": "dev-8.x-1.x",
-        "drush/drush": "^9.6",
+        "drush/drush": "^9.7.1 | ^10.0.0",
         "drupal/bootstrap": "3.*@dev",
         "ext-json": "*",
         "ext-mbstring": "^7.2",
@@ -36,13 +38,12 @@
         "php": ">=7.0",
         "singularo/stratoserp_base": "dev-8.x-1.x",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
-        "vlucas/phpdotenv": "^2.4",
+        "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
-      "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "drupal/core-dev": "~8.8"
+        "drupal/core-dev": "^8.8.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -79,29 +80,17 @@
             "library"
         ],
         "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset",
-                "harvesthq/chosen"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/Commands/{$name}": [
-                "type:drupal-drush"
-            ]
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library","type:bower-asset","type:npm-asset","harvesthq/chosen"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
         },
         "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
             "initial": {
                 "sites/default/default.services.yml": "sites/default/services.yml",
                 "sites/default/default.settings.php": "sites/default/settings.php"
