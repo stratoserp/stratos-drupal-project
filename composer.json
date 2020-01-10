@@ -26,7 +26,6 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
-        "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/drush_cmi_tools": "dev-8.x-2.x",
         "drupal/stratoserp": "dev-develop",
         "drupal/stratoserp_theme": "dev-8.x-1.x",
@@ -90,7 +89,7 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
-            }
+            },
             "initial": {
                 "sites/default/default.services.yml": "sites/default/services.yml",
                 "sites/default/default.settings.php": "sites/default/settings.php"
