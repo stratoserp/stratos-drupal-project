@@ -14,8 +14,7 @@
         { "type": "composer", "url": "https://asset-packagist.org" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
         { "type": "path", "url": "~/projects/stratoserp/stratoserp_base" },
-        { "type": "path", "url": "~/projects/iseek/shop/web/modules/custom/stratoserp" },
-        { "type": "path", "url": "~/projects/iseek/shop/web/themes/custom/stratoserp_theme" }
+        { "type": "path", "url": "~/projects/iseek/shop/web/modules/custom/stratoserp" }
     ],
     "require": {
         "php": ">=7.4",
@@ -30,7 +29,7 @@
         "drupal/stratoserp": "dev-develop",
         "drush/drush": "dev-master",
         "drupal/bootstrap4": "^2.0",
-        "singularo/stratoserp_base": "dev-develop",
+        "singularo/stratoserp_base": "dev-release/0.1.8",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
         "vlucas/phpdotenv": "^5",
         "webflo/drupal-finder": "^1.0.0",
