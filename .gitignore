@@ -35,3 +35,5 @@ drush/config-ignore.yml
 dsh
 dsh_bash
 web/
+/.editorconfig
+/.gitattributes

@@ -1,6 +1,6 @@
 {
     "name": "singularo/stratos-drupal-project",
-    "description": "Project template for Stratos Drupal 8 project",
+    "description": "Project template for StratosERP",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -12,36 +12,32 @@
     "repositories": [
         { "type": "composer", "url": "https://packages.drupal.org/8" },
         { "type": "composer", "url": "https://asset-packagist.org" },
-        { "type": "vcs", "url": "https://github.com/previousnext/drush_cmi_tools.git" },
-        { "type": "vcs", "url": "https://github.com/singularo/flat_comments.git" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "vcs", "url": "https://github.com/singularo/stratoserp_base.git" },
-        { "type": "vcs", "url": "https://github.com/singularo/stratoserp.git" },
-        { "type": "vcs", "url": "https://github.com/singularo/stratoserp_theme.git" }
+        { "type": "path", "url": "~/projects/stratoserp/stratoserp_base" },
+        { "type": "path", "url": "~/projects/iseek/shop/web/modules/custom/stratoserp" },
+        { "type": "path", "url": "~/projects/iseek/shop/web/themes/custom/stratoserp_theme" }
     ],
     "require": {
-        "composer-plugin-api": "^1.0",
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-posix": "*",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
-        "drupal-composer/drupal-scaffold": "^2.5",
-        "drupal/core": "^8.8.0",
-        "drupal/drush_cmi_tools": "dev-8.x-2.x",
+        "drupal/core": "^9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9",
         "drupal/stratoserp": "dev-develop",
-        "drupal/stratoserp_theme": "dev-8.x-1.x",
-        "drush/drush": "^9.7.1 | ^10.0.0",
-        "drupal/bootstrap": "3.*@dev",
-        "ext-json": "*",
-        "ext-mbstring": "^7.2",
-        "ext-posix": "*",
-        "php": ">=7.0",
-        "singularo/stratoserp_base": "dev-8.x-1.x",
+        "drush/drush": "dev-master",
+        "drupal/bootstrap4": "^2.0",
+        "singularo/stratoserp_base": "dev-develop",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
-        "vlucas/phpdotenv": "^4.0",
+        "vlucas/phpdotenv": "^5",
         "webflo/drupal-finder": "^1.0.0",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8.0"
+        "drupal/core-dev": "^9"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -49,28 +45,21 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "bin-dir": "bin",
+        "discard-changes": true,
+        "platform": {
+            "php": "7.4"
+        },
         "sort-packages": true
     },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": [
-            "load.environment.php"
-        ]
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "shepherd-scaffold": "Singularo\\ShepherdDrupalScaffold\\Plugin::scaffold",
-        "post-install-cmd": [
-            "@drupal-scaffold",
-            "@shepherd-scaffold"
-        ]
-    },
     "extra": {
-        "patchLevel": {
-            "drupal/core": "-p2"
+        "composer-exit-on-patch-failure": true,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "allowed-packages": [
+                "singularo/shepherd-drupal-scaffold"
+            ]
         },
         "installer-types": [
             "bower-asset",
@@ -79,58 +68,33 @@
         ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library","type:bower-asset","type:npm-asset","harvesthq/chosen"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset",
+                "harvesthq/chosen"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            },
-            "initial": {
-                "sites/default/default.services.yml": "sites/default/services.yml",
-                "sites/default/default.settings.php": "sites/default/settings.php"
-            }
+            "drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "preserve-paths": [
             "web/sites"
         ],
-        "composer-exit-on-patch-failure": true,
         "patches": {
-            "drupal/chartjs_api": {
-                "Line graph coloring doesn't work - fixed with upgrade to 2.8.0": "https://www.drupal.org/files/issues/2019-05-09/3053642-2.chartjs_api.Line-graph-coloring-doesnt-work--fixed-with-upgrade-to-280.patch"
-            },
             "drupal/chosen": {
                 "Chosen field should force height to auto": "https://www.drupal.org/files/issues/Issue-2839655-by-hass-Chosen-field-should-force-heig.patch"
             },
-            "drupal/core": {
-                "Add __toString to the entity Query class": "https://www.drupal.org/files/issues/2018-07-02/2902311-16.patch",
-                "Migrate exceptions need line details": "https://www.drupal.org/files/issues/2018-05-04/2969551.drupal.migrate-exceptions-missing-file-line.patch"
-            },
-            "drupal/duration_field": {
-                "Support the #date_increment property in the 'duration' form element": "https://www.drupal.org/files/issues/2018-12-14/3020676-6.duration_date_increment.full_.patch"
-            },
             "drupal/dynamic_entity_reference": {
-                "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch",
-                "List config entities": "https://www.drupal.org/files/issues/dynamic_entity_reference-list-config-entities-in-field-storage-settings-2932062-2.patch"
+                "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
             },
             "drupal/extra_field": {
                 "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
-            },
-            "drupal/pdf_api": {
-                "Set MPDF generation directory to drupals tmp directory": "https://www.drupal.org/files/issues/2019-01-31/tmp-directory-3016161-4.patch"
-            },
-            "drupal/printable": {
-                "Set default print storage path": "./patches/printable.patch"
-            },
-            "drupal/serial": {
-                "Support migrating existing values": "./patches/2946075.patch"
-            },
-            "drupal/views_bulk_operations": {
-                "Input/Label Javascript broken for other themes": "https://www.drupal.org/files/issues/2019-02-21/3034916-input-label-javascript-broken-for-other-themes-2.patch"
             }
+        },
+        "patchLevel": {
+            "drupal/core": "-p2"
         }
     }
 }
