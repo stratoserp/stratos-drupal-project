@@ -19,7 +19,7 @@
 # Capture command line args, or set defaults.
 BRANCH_NAME=${1:-8.x}
 DEST_DIR=${2:-~/projects/stratoserp/stratoserp-build}
-PACKAGE_NAME=singularo/stratos-drupal-project
+PACKAGE_NAME=stratoserp/stratos-drupal-project
 
 # Warn the dev if they have uncommitted changes since they won't
 # be included in the spawned project.
