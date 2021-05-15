@@ -1,20 +1,17 @@
 {
-    "name": "singularo/stratos-drupal-project",
+    "name": "stratoserp/stratos-drupal-project",
     "description": "Project template for StratosERP",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
-        {
-            "name": "Simon Lindsay (singularo)",
-            "role": "Developer"
-        }
+        { "name": "Simon Lindsay (singularo)", "role": "Developer" }
     ],
     "repositories": [
-        { "type": "composer", "url": "https://packages.drupal.org/8" },
+        { "type": "composer", "url": "https://packages.drupal.org/8", "exclude": ["drupal/stratoserp"] },
         { "type": "composer", "url": "https://asset-packagist.org" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "path", "url": "~/projects/stratoserp/stratoserp_base", "symlink": false },
-        { "type": "path", "url": "~/projects/iseek/shop/web/modules/custom/stratoserp", "symlink": false }
+        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp_base.git" },
+        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp.git" }
     ],
     "require": {
         "php": ">=7.4",
@@ -25,11 +22,10 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal/core": "^9",
         "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "^9",
         "drupal/stratoserp": "dev-develop",
-        "drush/drush": "dev-master",
+        "drush/drush": "^10",
         "drupal/bootstrap4": "^2.0",
-        "singularo/stratoserp_base": "dev-release/0.1.8",
+        "stratoserp/stratoserp_base": "^0.2.0",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
         "vlucas/phpdotenv": "^5",
         "webflo/drupal-finder": "^1.0.0",
@@ -62,16 +58,14 @@
         },
         "installer-types": [
             "bower-asset",
-            "npm-asset",
-            "library"
+            "npm-asset"
         ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
-                "type:npm-asset",
-                "harvesthq/chosen"
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
@@ -82,18 +76,22 @@
             "web/sites"
         ],
         "patches": {
-            "drupal/chosen": {
-                "Chosen field should force height to auto": "https://www.drupal.org/files/issues/Issue-2839655-by-hass-Chosen-field-should-force-heig.patch"
+            "drupal/core": {
+                "Update window location on tab click": "./patches/vertical-tabs.patch"
             },
             "drupal/dynamic_entity_reference": {
                 "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
             },
             "drupal/extra_field": {
                 "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
+            },
+            "drupal/preview_link": {
+                "Access check triggered when accessing preview url": "https://www.drupal.org/files/issues/2020-04-20/preview_link-entity_access-3129350-2.patch",
+                "Preview link can return AccessResult::forbidden for entity reference fields rendered on the preview route": "https://www.drupal.org/files/issues/2020-07-07/3117258-eref-preview-10.patch"
             }
         },
         "patchLevel": {
-            "drupal/core": "-p2"
+            "drupal/core": "-p1"
         }
     }
 }
