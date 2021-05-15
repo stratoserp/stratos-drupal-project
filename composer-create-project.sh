@@ -18,8 +18,8 @@
 
 # Capture command line args, or set defaults.
 BRANCH_NAME=${1:-8.x}
-DEST_DIR=${2:-~/stratoserp/stratoserp-build}
-PACKAGE_NAME=singularo/stratos-drupal-project
+DEST_DIR=${2:-~/projects/stratoserp/stratoserp-build}
+PACKAGE_NAME=stratoserp/stratos-drupal-project
 
 # Warn the dev if they have uncommitted changes since they won't
 # be included in the spawned project.
@@ -68,8 +68,16 @@ cat <<EOD > packages.json
 
 EOD
 
+composer clear-cache
+rm -rf $(composer config cache-files-dir)/singularo/
+rm -rf $(composer config cache-files-dir)/shepherd/
+rm -rf $(composer config cache-repo-dir)/*singularo*/
+rm -rf $(composer config cache-repo-dir)/*shepherd*/
+rm -rf $(composer config cache-vcs-dir)/*singularo*/
+rm -rf $(composer config cache-vcs-dir)/*shepherd*/
+
 # Execute the proper command.
-composer create-project --repository-url=./packages.json ${PACKAGE_NAME} "${DEST_DIR}" dev-${BRANCH_NAME} --stability=dev
+composer create-project --repository-url=./packages.json ${PACKAGE_NAME} "${DEST_DIR}" dev-${BRANCH_NAME} --stability=dev -n
 
 # Clean up after ourselves.
 rm -f packages.json

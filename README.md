@@ -14,7 +14,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project singularo/stratos-drupal-project:8.x-dev some-dir --no-interaction
+composer create-project stratoserp/stratos-drupal-project:8.x-dev some-dir --no-interaction
 ```
 
 The rest of this document is fro mthe main drupal project repository linked above.

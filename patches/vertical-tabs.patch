@@ -1,0 +1,72 @@
+diff --git a/misc/vertical-tabs.es6.js b/misc/vertical-tabs.es6.js
+index fea9ffc835..be5e383a59 100644
+--- a/misc/vertical-tabs.es6.js
++++ b/misc/vertical-tabs.es6.js
+@@ -142,13 +142,17 @@
+    */
+   Drupal.verticalTab = function (settings) {
+     const self = this;
++
++    // Get the ID of the tab pane element.
++    const detailsId = '#' + settings.details.attr('id');
+     $.extend(this, settings, Drupal.theme('verticalTab', settings));
+ 
+-    this.link.attr('href', `#${settings.details.attr('id')}`);
++    this.link.attr('href', detailsId);
+ 
+     this.link.on('click', (e) => {
+       e.preventDefault();
+       self.focus();
++      window.history.replaceState({}, '', detailsId);
+     });
+ 
+     // Keyboard events added:
+@@ -157,6 +161,8 @@
+       if (event.keyCode === 13) {
+         event.preventDefault();
+         self.focus();
++        window.history.replaceState({}, '', detailsId);
++
+         // Set focus on the first input field of the visible details/tab pane.
+         $('.vertical-tabs__pane :input:visible:enabled').eq(0).trigger('focus');
+       }
+@@ -264,7 +270,6 @@
+       }
+       return this;
+     },
+-  };
+ 
+   /**
+    * Theme function for a vertical tab.
+diff --git a/misc/vertical-tabs.js b/misc/vertical-tabs.js
+index 1ba55f9460..259cfd228c 100644
+--- a/misc/vertical-tabs.js
++++ b/misc/vertical-tabs.js
+@@ -69,16 +69,19 @@
+ 
+   Drupal.verticalTab = function (settings) {
+     var self = this;
++    var detailsId = '#' + settings.details.attr('id');
+     $.extend(this, settings, Drupal.theme('verticalTab', settings));
+-    this.link.attr('href', "#".concat(settings.details.attr('id')));
++    this.link.attr('href', detailsId);
+     this.link.on('click', function (e) {
+       e.preventDefault();
+       self.focus();
++      window.history.replaceState({}, '', detailsId);
+     });
+     this.link.on('keydown', function (event) {
+       if (event.keyCode === 13) {
+         event.preventDefault();
+         self.focus();
++        window.history.replaceState({}, '', detailsId);
+         $('.vertical-tabs__pane :input:visible:enabled').eq(0).trigger('focus');
+       }
+     });
+@@ -130,4 +133,4 @@
+     tab.item = $('<li class="vertical-tabs__menu-item" tabindex="-1"></li>').append(tab.link = $('<a href="#"></a>').append(tab.title = $('<strong class="vertical-tabs__menu-item-title"></strong>').text(settings.title)).append(tab.summary = $('<span class="vertical-tabs__menu-item-summary"></span>')));
+     return tab;
+   };
+-})(jQuery, Drupal, drupalSettings);
+\ No newline at end of file
++})(jQuery, Drupal, drupalSettings);
