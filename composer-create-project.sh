@@ -31,7 +31,6 @@ if ! git diff-index --quiet --cached HEAD; then
 		case ${yn} in
 			[Nn]* ) exit;;
 			[Yy]* ) break;;
-			* ) break;;
 		esac
 	done
 fi
@@ -45,7 +44,6 @@ if [[ -d "${DEST_DIR}" ]] && [[ "$(ls -A "${DEST_DIR}")" ]]; then
 		case ${yn} in
 			[Nn]* ) exit;;
 			[Yy]* ) sudo rm -rf "${DEST_DIR}"; break;;
-			* ) rm -rf "${DEST_DIR}"; break;;
 		esac
 	done
 fi
