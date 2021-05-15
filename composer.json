@@ -18,21 +18,21 @@
         "ext-json": "*",
         "ext-mbstring": "*",
         "ext-posix": "*",
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6.5",
-        "drupal/core": "^9",
-        "drupal/core-composer-scaffold": "^9",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/core": "^9.1",
+        "drupal/core-composer-scaffold": "^9.1",
         "drupal/stratoserp": "dev-develop",
-        "drush/drush": "^10",
+        "drush/drush": "^10.3",
         "drupal/bootstrap4": "^2.0",
         "stratoserp/stratoserp_base": "^0.2.0",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
-        "vlucas/phpdotenv": "^5",
-        "webflo/drupal-finder": "^1.0.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "vlucas/phpdotenv": "^5.1",
+        "webflo/drupal-finder": "^1.2"
     },
     "require-dev": {
-        "drupal/core-dev": "^9"
+        "drupal/core-dev": "^9.1",
+        "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -70,7 +70,7 @@
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
         },
         "preserve-paths": [
             "web/sites"
@@ -91,7 +91,7 @@
             }
         },
         "patchLevel": {
-            "drupal/core": "-p1"
+            "drupal/core": "-p2"
         }
     }
 }
