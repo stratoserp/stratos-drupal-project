@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d09a16eea542aec8e4a35fa30f0420a2",
+    "content-hash": "cab2e7421403c8307a876d238fa2ae15",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5563,16 +5563,16 @@
         },
         {
             "name": "stratoserp/stratoserp_base",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stratoserp/stratoserp_base.git",
-                "reference": "3f486409b01cdc70a5bc8e3fcc19bade99ff2ccc"
+                "reference": "2e844b4d2906f9108d8c1f54b8ccf7c03732217b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/3f486409b01cdc70a5bc8e3fcc19bade99ff2ccc",
-                "reference": "3f486409b01cdc70a5bc8e3fcc19bade99ff2ccc",
+                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/2e844b4d2906f9108d8c1f54b8ccf7c03732217b",
+                "reference": "2e844b4d2906f9108d8c1f54b8ccf7c03732217b",
                 "shasum": ""
             },
             "require": {
@@ -5659,7 +5659,7 @@
                 ],
                 "patches": {
                     "drupal/core": {
-                        "Update window location on tab click": "./patches/vertical-tabs.patch"
+                        "Update window location on tab click": "https://www.drupal.org/files/issues/2021-05-16/vertical-tabs.patch"
                     },
                     "drupal/dynamic_entity_reference": {
                         "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
@@ -5678,10 +5678,10 @@
             "description": "StratosERP installation profile",
             "homepage": "https://github.com/stratoserp/stratoserp_base",
             "support": {
-                "source": "https://github.com/stratoserp/stratoserp_base/tree/0.2.1",
+                "source": "https://github.com/stratoserp/stratoserp_base/tree/0.2.2",
                 "issues": "https://github.com/stratoserp/stratoserp_base/issues"
             },
-            "time": "2021-05-15T12:44:59+00:00"
+            "time": "2021-05-16T10:38:53+00:00"
         },
         {
             "name": "symfony-cmf/routing",

@@ -77,7 +77,7 @@
         ],
         "patches": {
             "drupal/core": {
-                "Update window location on tab click": "./patches/vertical-tabs.patch"
+                "Update window location on tab click": "https://www.drupal.org/files/issues/2021-05-16/vertical-tabs.patch"
             },
             "drupal/dynamic_entity_reference": {
                 "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
@@ -91,7 +91,7 @@
             }
         },
         "patchLevel": {
-            "drupal/core": "-p2"
+            "drupal/core": "-p1"
         }
     }
 }
