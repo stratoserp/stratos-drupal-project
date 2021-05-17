@@ -25,7 +25,7 @@
         "drupal/stratoserp": "dev-develop",
         "drush/drush": "^10.3",
         "drupal/bootstrap4": "^2.0",
-        "stratoserp/stratoserp_base": "^0.2.0",
+        "stratoserp/stratoserp_base": "dev-develop",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cab2e7421403c8307a876d238fa2ae15",
+    "content-hash": "7a687b6e99f2122755751c553189834a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5563,16 +5563,16 @@
         },
         {
             "name": "stratoserp/stratoserp_base",
-            "version": "0.2.3",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stratoserp/stratoserp_base.git",
-                "reference": "928860a3eb88af8fca173e1d548697561afb5d88"
+                "reference": "d8c7d2ed2c5b36e1eb7d3ea26b6dba1e5aea6143"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/928860a3eb88af8fca173e1d548697561afb5d88",
-                "reference": "928860a3eb88af8fca173e1d548697561afb5d88",
+                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/d8c7d2ed2c5b36e1eb7d3ea26b6dba1e5aea6143",
+                "reference": "d8c7d2ed2c5b36e1eb7d3ea26b6dba1e5aea6143",
                 "shasum": ""
             },
             "require": {
@@ -5678,10 +5678,10 @@
             "description": "StratosERP installation profile",
             "homepage": "https://github.com/stratoserp/stratoserp_base",
             "support": {
-                "source": "https://github.com/stratoserp/stratoserp_base/tree/0.2.3",
+                "source": "https://github.com/stratoserp/stratoserp_base/tree/develop",
                 "issues": "https://github.com/stratoserp/stratoserp_base/issues"
             },
-            "time": "2021-05-16T22:30:06+00:00"
+            "time": "2021-05-17T10:09:24+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -12235,6 +12235,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/stratoserp": 20,
+        "stratoserp/stratoserp_base": 20,
         "singularo/shepherd-drupal-scaffold": 20
     },
     "prefer-stable": true,

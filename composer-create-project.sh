@@ -68,7 +68,7 @@ cat <<EOD > packages.json
 
 EOD
 
-composer2 clear-cache
+composer clear-cache
 rm -rf $(composer config cache-files-dir)/singularo/
 rm -rf $(composer config cache-files-dir)/shepherd/
 rm -rf $(composer config cache-repo-dir)/*singularo*/
@@ -77,7 +77,7 @@ rm -rf $(composer config cache-vcs-dir)/*singularo*/
 rm -rf $(composer config cache-vcs-dir)/*shepherd*/
 
 # Execute the proper command.
-composer2 create-project --repository-url=./packages.json ${PACKAGE_NAME} "${DEST_DIR}" dev-${BRANCH_NAME} --stability=dev -n
+composer create-project --repository-url=./packages.json ${PACKAGE_NAME} "${DEST_DIR}" dev-${BRANCH_NAME} --stability=dev -n
 
 # Clean up after ourselves.
-rm -f packages.json
+#rm -f packages.json
