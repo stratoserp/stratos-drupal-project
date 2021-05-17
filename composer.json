@@ -10,8 +10,8 @@
         { "type": "composer", "url": "https://packages.drupal.org/8", "exclude": ["drupal/stratoserp"] },
         { "type": "composer", "url": "https://asset-packagist.org" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp_base.git" },
-        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp.git" }
+        { "type": "path", "url": "~/projects/stratoserp/stratoserp_base" },
+        { "type": "path", "url": "~/projects/iseek/shop/web/modules/custom/stratoserp", "symlink": false }
     ],
     "require": {
         "php": ">=7.4",
@@ -25,7 +25,7 @@
         "drupal/stratoserp": "dev-develop",
         "drush/drush": "^10.3",
         "drupal/bootstrap4": "^2.0",
-        "stratoserp/stratoserp_base": "^0.2.0",
+        "stratoserp/stratoserp_base": "dev-develop",
         "singularo/shepherd-drupal-scaffold": "dev-develop",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"
