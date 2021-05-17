@@ -5561,7 +5561,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/simon/projects/stratoserp/stratoserp_base",
-                "reference": "cd7fc4cb2054187cde2ea73f04cc3b43a2ce7efb"
+                "reference": "15025e83bd645ac330d5ceecd19c324071bb91c0"
             },
             "require": {
                 "composer/installers": "^1.2",
