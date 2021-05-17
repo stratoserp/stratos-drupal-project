@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93fd1c0de52e3daa096aa919b17e351a",
+    "content-hash": "7a687b6e99f2122755751c553189834a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2643,10 +2643,16 @@
         {
             "name": "drupal/stratoserp",
             "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stratoserp/stratoserp.git",
+                "reference": "2e88bb10cf8418070725cf2dbc9cd3ea3f8550a6"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/simon/projects/iseek/shop/web/modules/custom/stratoserp",
-                "reference": "f8d539b321826f8a2ccda6941d9c9465db2a8589"
+                "type": "zip",
+                "url": "https://api.github.com/repos/stratoserp/stratoserp/zipball/2e88bb10cf8418070725cf2dbc9cd3ea3f8550a6",
+                "reference": "2e88bb10cf8418070725cf2dbc9cd3ea3f8550a6",
+                "shasum": ""
             },
             "require": {
                 "drupal/core": "^9",
@@ -2656,6 +2662,7 @@
                 "drupal/geolocation": "^3.2",
                 "drupal/xero": "dev-2.x"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
@@ -2669,11 +2676,10 @@
             ],
             "description": "StratosERP.",
             "support": {
-                "issues": "https://github.com/singularo/stratoserp/issues"
+                "issues": "https://github.com/singularo/stratoserp/issues",
+                "source": "https://github.com/stratoserp/stratoserp/tree/develop"
             },
-            "transport-options": {
-                "relative": false
-            }
+            "time": "2021-05-16T12:31:10+00:00"
         },
         {
             "name": "drupal/token",
@@ -5558,10 +5564,16 @@
         {
             "name": "stratoserp/stratoserp_base",
             "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stratoserp/stratoserp_base.git",
+                "reference": "d8c7d2ed2c5b36e1eb7d3ea26b6dba1e5aea6143"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/simon/projects/stratoserp/stratoserp_base",
-                "reference": "15025e83bd645ac330d5ceecd19c324071bb91c0"
+                "type": "zip",
+                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/d8c7d2ed2c5b36e1eb7d3ea26b6dba1e5aea6143",
+                "reference": "d8c7d2ed2c5b36e1eb7d3ea26b6dba1e5aea6143",
+                "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -5665,9 +5677,11 @@
             ],
             "description": "StratosERP installation profile",
             "homepage": "https://github.com/stratoserp/stratoserp_base",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/stratoserp/stratoserp_base/tree/develop",
+                "issues": "https://github.com/stratoserp/stratoserp_base/issues"
+            },
+            "time": "2021-05-17T10:09:24+00:00"
         },
         {
             "name": "symfony-cmf/routing",
