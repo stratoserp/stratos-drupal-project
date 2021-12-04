@@ -10,8 +10,8 @@
         { "type": "composer", "url": "https://packages.drupal.org/8", "exclude": ["drupal/stratoserp"] },
         { "type": "composer", "url": "https://asset-packagist.org" },
         { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp_base.git" },
-        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp.git" }
+        { "type": "path", "url": "~/projects/stratoserp/stratoserp_base" },
+        { "type": "path", "url": "~/projects/stratoserp/stratoserp", "symlink": false }
     ],
     "require": {
         "php": ">=7.4",
@@ -19,18 +19,18 @@
         "ext-mbstring": "*",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
-        "drupal/core": "^9.1",
-        "drupal/core-composer-scaffold": "^9.1",
-        "drush/drush": "^10.3",
-        "drupal/bootstrap4": "^2.0",
+        "drupal/core": "^9.3",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drush/drush": "^10",
+        "drupal/bootstrap4": "^2.1",
+        "singularo/shepherd-drupal-scaffold": "dev-develop",
         "stratoserp/stratoserp": "dev-develop",
         "stratoserp/stratoserp_base": "dev-develop",
-        "singularo/shepherd-drupal-scaffold": "dev-develop",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"
     },
     "require-dev": {
-        "drupal/core-dev": "^9.1",
+        "drupal/core-dev": "^9",
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
@@ -74,23 +74,9 @@
         "preserve-paths": [
             "web/sites"
         ],
-        "patches": {
-            "drupal/core": {
-                "Update window location on tab click": "https://www.drupal.org/files/issues/2021-05-16/vertical-tabs.patch"
-            },
-            "drupal/dynamic_entity_reference": {
-                "Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
-            },
-            "drupal/extra_field": {
-                "Allow form extra fields to be declared through ExtraField plugins": "https://www.drupal.org/files/issues/2019-01-17/extra_field-using_in_forms-2882061-24.patch"
-            },
-            "drupal/preview_link": {
-                "Access check triggered when accessing preview url": "https://www.drupal.org/files/issues/2020-04-20/preview_link-entity_access-3129350-2.patch",
-                "Preview link can return AccessResult::forbidden for entity reference fields rendered on the preview route": "https://www.drupal.org/files/issues/2020-07-07/3117258-eref-preview-10.patch"
-            }
-        },
+        "patches-file": "composer.patches.json",
         "patchLevel": {
-            "drupal/core": "-p1"
+            "drupal/core": "-p2"
         }
     }
 }

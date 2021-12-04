@@ -1,0 +1,13 @@
+{
+  "patches": {
+    "drupal/core": {
+      "https://www.drupal.org/node/2627788 - Focus state bug": "https://www.drupal.org/files/issues/2021-04-20/2627788-44_0.patch"
+    },
+    "drupal/dynamic_entity_reference": {
+      "https://drupal.org/node/2381991 - Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
+    },
+    "drupal/xero": {
+      "https://www.drupal.org/node/3252565 - PHP 8 Compatibility": "https://www.drupal.org/files/issues/2021-12-04/fix-xero-deprecated.patch"
+    }
+  }
+}
