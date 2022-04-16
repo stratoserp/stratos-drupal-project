@@ -23,14 +23,14 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drush/drush": "^10",
         "drupal/bootstrap4": "^2.1",
-        "singularo/shepherd-drupal-scaffold": "dev-develop",
+        "singularo/shepherd-drupal-scaffold": "dev-php8",
         "stratoserp/stratoserp": "dev-develop",
         "stratoserp/stratoserp_base": "dev-develop",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"
     },
     "require-dev": {
-        "drupal/core-dev": "^9",
+        "drupal/core-dev": "^9.3",
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
@@ -43,17 +43,26 @@
         "platform": {
             "php": "7.4"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true,
+            "singularo/shepherd-drupal-scaffold": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            },
             "allowed-packages": [
                 "singularo/shepherd-drupal-scaffold"
-            ]
+            ],
+            "locations": {
+                "web-root": "web/"
+            }
         },
         "installer-types": [
             "bower-asset",
