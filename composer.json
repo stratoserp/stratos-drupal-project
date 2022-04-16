@@ -34,6 +34,9 @@
     },
     "require-dev": {
         "drupal/core-dev": "^9.3",
+        "fakerphp/faker": "^1.17",
+        "phpspec/prophecy-phpunit": "^2",
+        "weitzman/drupal-test-traits": "^1.5",
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
