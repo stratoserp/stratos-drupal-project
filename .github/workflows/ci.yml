@@ -1,6 +1,14 @@
-name: CI
+#
+# GitHub workflow for Composer StratosERP installation.
+#
 
-on: [push]
+name: Composer StratosERP installation.
+
+on:
+  push:
+    branches:
+      - 9.x
+      - develop
 
 env:
   COMPOSER_MEMORY_LIMIT: -1
