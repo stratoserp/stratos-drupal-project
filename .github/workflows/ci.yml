@@ -6,68 +6,63 @@ env:
   COMPOSER_MEMORY_LIMIT: -1
   SIMPLETEST_DB: sqlite://tmp/site.sqlite
   SIMPLETEST_BASE_URL: "http://127.0.0.1:8080"
+  SQLITE_DATABASE: $SIMPLETEST_DB
+  DTT_BASE_URL: "http://127.0.0.1:8080"
+  DTT_MINK_DRIVER_ARGS: '["chrome", null, "http://127.0.0.1:4444/wd/hub"]'
+  # Output directories
+  BROWSERTEST_OUTPUT_DIRECTORY: /tmp/browser_output
+  PRIVATE_DIR: /tmp/private
+  PUBLIC_DIR: /tmp/public
+  TMP_DIR: /tmp
 
 jobs:
   build:
-    runs-on: 'ubuntu-20.04'
+    runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
-        php-versions: ['7.3', '7.4', '8.0']
-        drupal-release: ['stable']
+        php-versions: ['8.0']
         composer-channel: ['stable']
         include:
           - php-versions: '8.0'
-            drupal-release: dev
             composer-channel: stable
-          - php-versions: '8.0'
-            drupal-release: stable
-            composer-channel: snapshot
     steps:
       - name: Dump matrix context
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
         run: echo "$MATRIX_CONTEXT"
 
-      - name: Checkout
-        uses: actions/checkout@v2
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          extensions: gd, pdo_sqlite
+          extensions: gd, pdo_sqlite, sqlite3
+
+      - name: Start ChromeDriver
+        run: |
+          google-chrome --version
+          xvfb-run --server-args="-screen 0, 1280x720x24" --auto-servernum \
+          chromedriver --port=4444 --url-base=/wd/hub &> /tmp/chromedriver.log &
 
       - name: Update composer
         run: composer --verbose self-update --${{ matrix.composer-channel }}
 
-      - name: Dump composer verson
-        run: composer --version
+      - name: Create an install using composer
+        run: composer create-project stratoserp/stratos-drupal-project:9.x-dev .
 
-      - name: Validate composer.json
-        run: composer --verbose validate
+      - name: Ensure directories for filesystem exist
+        run: mkdir -p $PRIVATE_DIR $PUBLIC_DIR $TMP_DIR $BROWSERTEST_OUTPUT_DIRECTORY
 
-      - name: Install dependencies
-        run: composer --verbose install
+      - name: Perform a standard installation
+        run: ./vendor/bin/drush -v site:install stratoserp_base --account-mail admin@example.com --account-name admin --account-pass password --site-name 'Drupal site' --site-mail site@example.com --yes --db-url=$SIMPLETEST_DB
 
-      - if: matrix.drupal-release == 'dev'
-        run: composer --verbose require --no-update drupal/core-recommended:9.2.x-dev && composer --verbose require --no-update --dev drupal/core-dev:9.2.x-dev
-
-      - if: matrix.drupal-release == 'dev'
-        run: composer --verbose update
-
-      - run: ./vendor/bin/drush site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite
+      - name: Install modules for tests
+        run: ./vendor/bin/drush pm-enable se_example_data --yes
 
       - run: ./vendor/bin/drush runserver $SIMPLETEST_BASE_URL &
 
       - run: until curl -s $SIMPLETEST_BASE_URL; do true; done > /dev/null
 
-        # https://www.drupal.org/project/drupal/issues/3182653
-        # https://www.drupal.org/node/3176567
-      - if: ${{ matrix.php-versions == '7.4' }} || ${{ matrix.php-versions == '8.0' }}
-        run: composer require phpspec/prophecy-phpunit:^2
-
-      - name: Run a single unit test to verfiy the testing setup.
-        run: ./vendor/bin/phpunit -c ./web/core ./web/core/modules/user/tests/src/Unit/UserAccessControlHandlerTest.php
-
-      - run: ./vendor/bin/drush
+      - name: Run unit tests to verify the testing setup.
+        run: ./vendor/bin/phpunit --testdox
