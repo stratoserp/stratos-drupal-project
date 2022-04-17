@@ -14,7 +14,7 @@
         { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp.git" }
     ],
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "ext-json": "*",
         "ext-mbstring": "*",
         "composer/installers": "^1.9",
