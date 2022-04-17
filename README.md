@@ -13,12 +13,17 @@ You might need to replace `composer` with `php composer.phar` (or similar)
 for your setup.
 
 After that you can create the project:
-
 ```
 composer create-project stratoserp/stratos-drupal-project:9.x-dev some-dir --no-interaction
 ```
 
-The rest of this document is fro mthe main drupal project repository linked above.
+Or for a development setup:
+```
+composer create-project stratoserp/stratos-drupal-project:9.x-dev some-dir --prefer-source --keep-vcs
+```
+
+
+The rest of this document is from the main drupal project repository linked above.
 
 With `composer require ...` you can download new dependencies to your
 installation.
