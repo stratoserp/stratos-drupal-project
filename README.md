@@ -1,4 +1,4 @@
-# Composer template for Stratos ERP.
+# Composer template for StratosERP.
 Based on the composer template for Drupal projects - https://github.com/drupal-composer/drupal-project
 
 This project template provides a starter kit for managing your site
@@ -15,7 +15,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project stratoserp/stratos-drupal-project:8.x-dev some-dir --no-interaction
+composer create-project stratoserp/stratos-drupal-project:9.x-dev some-dir --no-interaction
 ```
 
 The rest of this document is fro mthe main drupal project repository linked above.

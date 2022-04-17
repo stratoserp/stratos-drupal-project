@@ -1,4 +1,4 @@
-# Quickstart for Stratos ERP
+# Quickstart for StratosERP
 
 A Basic .env file has been included to set the SHEPHERD_INSTALL_PROFILE
 environment variable, but the quickstart below also has it explicitlty,
