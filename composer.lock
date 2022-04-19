@@ -5414,12 +5414,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stratoserp/stratoserp_base.git",
-                "reference": "105b14efeb3e68c5e8a203248d6a624be1078879"
+                "reference": "7687d479556fb1ca60651e4eb87d46e04b5dd3d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/105b14efeb3e68c5e8a203248d6a624be1078879",
-                "reference": "105b14efeb3e68c5e8a203248d6a624be1078879",
+                "url": "https://api.github.com/repos/stratoserp/stratoserp_base/zipball/7687d479556fb1ca60651e4eb87d46e04b5dd3d8",
+                "reference": "7687d479556fb1ca60651e4eb87d46e04b5dd3d8",
                 "shasum": ""
             },
             "require": {
@@ -5449,7 +5449,7 @@
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "oomphinc/composer-installers-extender": "^2.0",
-                "php": ">=7.4",
+                "php": ">=8.0",
                 "singularo/shepherd-drupal-scaffold": "dev-php8",
                 "vlucas/phpdotenv": "^5.1",
                 "webflo/drupal-finder": "^1.2",
@@ -5520,7 +5520,7 @@
                 "source": "https://github.com/stratoserp/stratoserp_base/tree/develop",
                 "issues": "https://github.com/stratoserp/stratoserp_base/issues"
             },
-            "time": "2022-04-19T07:57:02+00:00"
+            "time": "2022-04-19T09:48:04+00:00"
         },
         {
             "name": "symfony-cmf/routing",
