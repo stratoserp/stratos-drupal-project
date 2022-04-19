@@ -25,6 +25,7 @@
         "drupal/date_popup": "^1.1",
         "drupal/multiple_fields_remove_button": "^1.0@alpha",
         "drupal/views_data_export": "^1.1",
+        "drupal/webform_views": "^5.0@beta",
         "drush/drush": "^11",
         "singularo/shepherd-drupal-scaffold": "dev-php8",
         "stratoserp/stratoserp": "dev-develop",
