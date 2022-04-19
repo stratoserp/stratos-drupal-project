@@ -5360,12 +5360,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stratoserp/stratoserp.git",
-                "reference": "3fbb48bfd62be333e07139f19d1cbfcf3572badb"
+                "reference": "91a209df1dd927189c653ee6f517ee37b695f058"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stratoserp/stratoserp/zipball/3fbb48bfd62be333e07139f19d1cbfcf3572badb",
-                "reference": "3fbb48bfd62be333e07139f19d1cbfcf3572badb",
+                "url": "https://api.github.com/repos/stratoserp/stratoserp/zipball/91a209df1dd927189c653ee6f517ee37b695f058",
+                "reference": "91a209df1dd927189c653ee6f517ee37b695f058",
                 "shasum": ""
             },
             "require": {
@@ -5406,7 +5406,7 @@
                     "url": "https://github.com/singularo"
                 }
             ],
-            "time": "2022-04-19T07:56:28+00:00"
+            "time": "2022-04-19T22:57:30+00:00"
         },
         {
             "name": "stratoserp/stratoserp_base",

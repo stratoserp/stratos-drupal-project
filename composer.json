@@ -57,6 +57,10 @@
             "singularo/shepherd-drupal-scaffold": true,
             "zaporylie/composer-drupal-optimizations": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "preferred-install": {
+            "stratoserp/*": "source",
+            "singularo/*": "source"
         }
     },
     "extra": {
