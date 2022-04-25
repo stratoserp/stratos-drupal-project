@@ -17,7 +17,7 @@
 
 
 # Capture command line args, or set defaults.
-BRANCH_NAME=${1:-8.x}
+BRANCH_NAME=${1:-9.x}
 DEST_DIR=${2:-~/projects/stratoserp/stratoserp-build}
 PACKAGE_NAME=stratoserp/stratos-drupal-project
 
