@@ -9,7 +9,7 @@
     "repositories": [
         { "type": "composer", "url": "https://packages.drupal.org/8", "exclude": ["stratoserp/stratoserp"] },
         { "type": "composer", "url": "https://asset-packagist.org" },
-        { "type": "path", "url": "~/projects/singularo/shepherd-drupal-scaffold", "options": { "symlink": false } }
+        { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" }
     ],
     "require": {
         "php": ">=8.0",
