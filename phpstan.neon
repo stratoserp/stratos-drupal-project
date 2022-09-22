@@ -1,6 +1,6 @@
 parameters:
-    paths:
-        - web/modules/custom/stratoserp/
+	paths:
+		- web/modules/contrib/stratoserp/
 	customRulesetUsed: true
 	reportUnmatchedIgnoredErrors: false
 	# Ignore phpstan-drupal extension's rules.

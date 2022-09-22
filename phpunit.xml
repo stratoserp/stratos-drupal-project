@@ -4,6 +4,7 @@
          beStrictAboutTestsThatDoNotTestAnything="true"
          beStrictAboutOutputDuringTests="true"
          beStrictAboutChangesToGlobalState="true"
+         forceCoversAnnotation="true"
          printerClass="\Drupal\Tests\Listeners\HtmlOutputPrinter"
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
   <coverage>
@@ -21,7 +22,7 @@
     <const name="BOOTSTRAP_IS_PHPUNIT" value="true"/>
     <ini name="error_reporting" value="32767"/>
     <ini name="memory_limit" value="-1"/>
-    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/code/web/sites/simpletest/browser_output"/>
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="./web/sites/simpletest/browser_output"/>
     <env name="SIMPLETEST_BASE_URL" value="http://web:8080"/>
     <env name="DTT_BASE_URL" value="http://web:8080"/>
     <env name="DTT_MINK_DRIVER_ARGS" value="[&quot;chrome&quot;, null, &quot;http://selenium:4444/wd/hub&quot;]"/>
@@ -41,6 +42,7 @@
       <directory>./web/modules/contrib/stratoserp/tests/src/Functional</directory>
       <directory>./web/modules/contrib/stratoserp/modules/*/tests/src/Functional</directory>
       <directory>./web/modules/contrib/stratoserp/modules/se_item/modules/*/tests/src/Functional</directory>
+      <directory>./web/modules/contrib/stratoserp/modules/se_subscription/modules/*/tests/src/Functional</directory>
     </testsuite>
     <testsuite name="functionaljavascript">
       <directory>./web/modules/contrib/stratoserp/tests/src/FunctionalJavascript</directory>
