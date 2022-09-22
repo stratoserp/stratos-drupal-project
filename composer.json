@@ -7,11 +7,9 @@
         { "name": "Simon Lindsay (singularo)", "role": "Developer" }
     ],
     "repositories": [
-        { "type": "composer", "url": "https://packages.drupal.org/8", "exclude": ["drupal/stratoserp"] },
+        { "type": "composer", "url": "https://packages.drupal.org/8", "exclude": ["stratoserp/stratoserp"] },
         { "type": "composer", "url": "https://asset-packagist.org" },
-        { "type": "vcs", "url": "https://github.com/singularo/shepherd-drupal-scaffold.git" },
-        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp_base.git" },
-        { "type": "vcs", "url": "https://github.com/stratoserp/stratoserp.git" }
+        { "type": "path", "url": "~/projects/singularo/shepherd-drupal-scaffold", "options": { "symlink": false } }
     ],
     "require": {
         "php": ">=8.0",
@@ -19,25 +17,31 @@
         "ext-mbstring": "*",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
-        "drupal/bootstrap4": "^2.1",
-        "drupal/core": "^9.3",
-        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core": "^9.4",
         "drupal/date_popup": "^1.1",
+        "drupal/memcache": "^2.4",
         "drupal/views_data_export": "^1.1",
-        "drupal/webform_views": "^5.0@beta",
+        "drupal/webform_views": "^5.0@alpha",
         "drush/drush": "^11",
-        "singularo/shepherd-drupal-scaffold": "dev-php8",
         "stratoserp/stratoserp": "dev-develop",
-        "stratoserp/stratoserp_base": "dev-develop",
-        "vlucas/phpdotenv": "^5.1",
-        "webflo/drupal-finder": "^1.2"
+        "stratoserp/stratoserp_base": "dev-develop"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest",
-        "drupal/config_devel": "^1.8",
-        "drupal/core-dev": "^9.3",
+        "drupal/coder": "^8.3",
+        "drupal/config_devel": "^1.9",
+        "drupal/core-dev": "^9.4",
+        "drupal/drupal-extension": "^4.1",
         "fakerphp/faker": "^1.17",
+        "mglaman/drupal-check": "^1.2",
+        "mglaman/phpstan-drupal": "^1.1",
+        "palantirnet/drupal-rector": "^0.12.0",
+        "phpmd/phpmd": "^2.6",
         "phpspec/prophecy-phpunit": "^2",
+        "phpstan/phpstan": "^1.8",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpunit/phpunit": "^9.3.10",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^3.3",
         "weitzman/drupal-test-traits": "^1.5",
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
@@ -47,7 +51,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "discard-changes": true,
+        "discard-changes": "stash",
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
@@ -60,7 +64,8 @@
         },
         "preferred-install": {
             "stratoserp/*": "source",
-            "singularo/*": "source"
+            "singularo/*": "source",
+            "drupal/*": "source"
         }
     },
     "extra": {
@@ -95,6 +100,11 @@
         "patches-file": "composer.patches.json",
         "patchLevel": {
             "drupal/core": "-p2"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "StratosERP\\": "src/"
         }
     }
 }
