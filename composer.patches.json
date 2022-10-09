@@ -3,8 +3,7 @@
     "drupal/core": {
       "https://drupal.org/node/1038316 - Allow for deletion of a single value of a multiple value field": "https://www.drupal.org/files/issues/2021-12-01/1038316-242.patch",
       "https://drupal.org/node/1120020 - SQLite database locking errors cause fatal errors": "https://www.drupal.org/files/issues/2022-07-03/1120020-108.patch",
-      "https://drupal.org/node/2752511 - Update location hash": "https://www.drupal.org/files/issues/2022-06-17/2752511-109-9.5.x.patch",
-      "https://drupal.org/node/2993165 - Date Only field incorrect default value": "https://www.drupal.org/files/issues/2022-06-22/2993165-date-only-field-shows-incorrect-default-value-55-d94.patch"
+      "https://drupal.org/node/2752511 - Update location hash": "https://www.drupal.org/files/issues/2022-06-17/2752511-109-9.5.x.patch"
     },
     "drupal/dynamic_entity_reference": {
       "https://drupal.org/node/2381991 - Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
