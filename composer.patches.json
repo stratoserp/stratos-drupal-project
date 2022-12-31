@@ -1,12 +1,30 @@
 {
   "patches": {
     "drupal/core": {
-      "https://drupal.org/node/1038316 - Allow for deletion of a single value of a multiple value field": "https://www.drupal.org/files/issues/2021-12-01/1038316-242.patch",
-      "https://drupal.org/node/1120020 - SQLite database locking errors cause fatal errors": "https://www.drupal.org/files/issues/2022-07-03/1120020-108.patch",
-      "https://drupal.org/node/2752511 - Update location hash": "https://www.drupal.org/files/issues/2022-06-17/2752511-109-9.5.x.patch"
+      "https://drupal.org/node/1038316 - Allow for deletion of a single value of a multiple value field": "https://www.drupal.org/files/issues/2021-12-01/1038316-242.patch"
+    },
+    "drupal/chartjs_api": {
+      "https://drupal.org/node/3270449 - Update to later chartjs version": "https://www.drupal.org/files/issues/2022-03-19/3270449-2.chartjs_api.Update-to-later-chartjs-version.patch"
     },
     "drupal/dynamic_entity_reference": {
       "https://drupal.org/node/2381991 - Allow users to select a bundle": "https://www.drupal.org/files/issues/2018-10-28/dynamic_entity_reference-select-per_bundle-2381991-9.patch"
+    },
+    "drupal/entity_print": {
+      "https://drupal.org/node/2716005 - Add export to email functionality": "https://www.drupal.org/files/issues/2020-02-21/entity_print_mail_module-2716005-16-1.patch",
+      "https://drupal.org/node/2972590 - Content variables missing from PDF": "https://www.drupal.org/files/issues/2018-05-14/hook_preprocess_HOOK-2972590-7.patch"
+    },
+    "drupal/fullcalendar_view": {
+      "https://drupal.org/node/2976922 - Add functionality for all-day events": "https://www.drupal.org/files/issues/2022-03-19/2976922-18.fullcalendar_view.Add-functionality-for-allday-events.patch"
+    },
+    "drupal/o365": {
+      "https://drupal.org/node/3322994 - Deprecated function: substr(): Passing null to parameter #1": "https://www.drupal.org/files/issues/2022-11-22/o365_sso.patch",
+      "https://drupal.org/node/3274130 - Support other Tenant ID's in getTokenUrl": "https://www.drupal.org/files/issues/2022-04-08/3274130-2.o365.Support-other-Tenant-IDs-in-getTokenUrl.patch"
+    },
+    "drupal/smart_date": {
+      "https://drupal.org/node/3145989 - Make smart date support old and new versions of fullcalendar_view": "https://www.drupal.org/files/issues/2020-06-04/smart_date-support_old_and_new_fcv-3145989-3.patch"
+    },
+    "drupal/stripe_api": {
+      "https://drupal.org/node/3176943 - Migrate to new stripe client": "https://www.drupal.org/files/issues/2021-01-13/stripe_api-migrate_new_client-3176943-7.patch"
     }
   }
 }

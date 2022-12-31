@@ -109,6 +109,7 @@ trait TestingCommands {
     // Ensure example data module installed for testing.
     $this->drush('pm:enable')
       ->arg('se_example_data')
+      ->arg('se_subscription_invoice')
       ->option('yes')
       ->run();
 
